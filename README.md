@@ -31,7 +31,7 @@ with the command "ssh username@yourpublicip" followed by your password
 
 <img width="1881" height="895" alt="image" src="https://github.com/user-attachments/assets/2d6af689-6dbf-4063-b5c5-bba0179dafd2" />
 
-#### Step 3: Access and configure TheHive
+#### Step 3: Access and configure Cassandra
 
 * firstly access TheHive using ssh again using your personal CMD
 
@@ -66,7 +66,7 @@ followed by systemctl status cassandra.service
 
 <img width="887" height="62" alt="image" src="https://github.com/user-attachments/assets/f80801e0-c064-474e-9c6c-287a75808d12" />
 
-#### Step 3a: Configure Elastic search on TheHive
+#### Step 3a: Configure Elastic search
 
 we first  start by
 
@@ -80,6 +80,26 @@ change the following:
 * change cluster.initial_master_nodes: get rid of node 2 and the #
 
 save it by using: Cntl + x then press y then Enter
+
+type in the following to start: Systemctl start elasticsearch 
+then type: systemctl status elasticsearch (to make sure its goood)
+
+<img width="1232" height="66" alt="image" src="https://github.com/user-attachments/assets/17836af7-cb8a-41bb-ba90-efdeb2f84f66" />
+
+
+#### Step 4: Configure the Hive
+
+before we start we want to make sure we change owner from root so that the owner and group is TheHive
+
+we first check by cd to the directory with the files 
+
+By typing the command: /opt/thp# ll (ll shows the files and permissions) 
+then to change the permissions: chown -R thehive:thehive /opt/thp
+
+Should look like this:
+
+<img width="737" height="295" alt="image" src="https://github.com/user-attachments/assets/402098d7-380b-4ba1-bfda-308c2ef6b3cc" />
+
 
 
 
