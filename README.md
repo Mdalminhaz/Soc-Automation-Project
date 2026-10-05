@@ -100,6 +100,45 @@ Should look like this:
 
 <img width="737" height="295" alt="image" src="https://github.com/user-attachments/assets/402098d7-380b-4ba1-bfda-308c2ef6b3cc" />
 
+Then to configure TheHuve
+type: nano /etc/thehive/application.conf 
+
+change the following: 
+* change hostname to your public ip
+* change clustername to the same one as before
+* change hostname under elasticsearch to your public ip
+* then change application baseURL localhost to your public ip address
+
+Then you can save by cntrl x then y then enter
+
+You can now start TheHive
+
+type the following commands: 
+Systemctl start thehive
+Systemctl enable thehive
+systemctl status thehive
+
+<img width="1047" height="85" alt="image" src="https://github.com/user-attachments/assets/c93c55d2-b1b5-48ea-8857-7667a5f362be" />
+
+
+#### Quick Check 
+
+Before we continue lets make sure everything is up and running
+
+type the following:
+
+systemctl status cassandra.service
+<img width="877" height="70" alt="image" src="https://github.com/user-attachments/assets/7fac999f-d184-488c-8af8-706a0c138ee0" />
+
+
+systemctl status elasticsearch.service
+<img width="1181" height="65" alt="image" src="https://github.com/user-attachments/assets/8ff37240-cffd-467e-85af-bc17ad3fbe36" />
+
+systemctl status thehvie.service
+<img width="1046" height="67" alt="image" src="https://github.com/user-attachments/assets/48aab1e2-e495-46c2-a360-17d0bbcfb8ac" />
+
+#### Step 5: access your Hive Webpage
+
 
 
 
